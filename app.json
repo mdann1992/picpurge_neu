@@ -2,18 +2,32 @@
   "expo": {
     "name": "PicPurge",
     "slug": "PicPurge",
-    "version": "1.0.0",
+    "version": "19.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "PicPurge needs access to your photo library to show and delete images.",
+          "savePhotosPermission": "PicPurge needs permission to manage your photo library."
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "buildNumber": "18.0.0",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.deltaapps.PicPurge",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +39,16 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "01724849-a20b-4637-b58c-c319ee6ff716"
+      }
+    },
+    "owner": "deltaapps"
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-5609900560713643~5198708942",
+    "ios_app_id": "ca-app-pub-5609900560713643~7497623126"
   }
 }
